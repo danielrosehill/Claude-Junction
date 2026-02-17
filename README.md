@@ -1,3 +1,5 @@
+![Agent Junction](banner.png)
+
 # Agent Junction
 
 [![npm version](https://img.shields.io/npm/v/agent-junction)](https://www.npmjs.com/package/agent-junction)
