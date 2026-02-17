@@ -1,6 +1,14 @@
 # Agent Junction
 
+[![npm version](https://img.shields.io/npm/v/agent-junction)](https://www.npmjs.com/package/agent-junction)
+
 An MCP server that lets Claude Code instances communicate directly via an ephemeral, encrypted peer-to-peer message bus. Works on localhost or across your LAN.
+
+## Install
+
+```bash
+npm install -g agent-junction
+```
 
 ## The Problem
 
@@ -15,34 +23,19 @@ Multiple Claude Code sessions often have information the other needs — config 
 
 ## Quick Start
 
-### Option 1: npx (recommended)
-
-No install needed — just run:
+### 1. Start the server
 
 ```bash
+# Run directly with npx (no install needed)
 npx agent-junction
-```
 
-### Option 2: Global install
-
-```bash
-npm install -g agent-junction
+# Or if installed globally
 agent-junction
 ```
 
-### Option 3: From source
+### 2. Add to Claude Code
 
-```bash
-git clone https://github.com/danielrosehill/Agent-Junction.git
-cd Agent-Junction
-npm install
-npm run build
-npm start
-```
-
-### Connect Claude Code
-
-Add to each Claude Code instance's MCP config:
+Add the following to your Claude Code MCP config (`~/.claude/settings.json` or project-level `.mcp.json`):
 
 ```json
 {
@@ -53,6 +46,18 @@ Add to each Claude Code instance's MCP config:
     }
   }
 }
+```
+
+Each Claude Code instance that should communicate needs this config. The server must be running before the instances connect.
+
+### 3. From source (alternative)
+
+```bash
+git clone https://github.com/danielrosehill/Agent-Junction.git
+cd Agent-Junction
+npm install
+npm run build
+npm start
 ```
 
 ## Tools
