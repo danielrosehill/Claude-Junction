@@ -1,13 +1,21 @@
 {
-  "name": "claude-junction",
+  "name": "agent-junction",
   "version": "0.1.0",
   "description": "Localhost MCP server for ephemeral, encrypted peer-to-peer messaging between Claude Code instances",
   "author": "Daniel Rosehill",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielrosehill/Agent-Junction.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danielrosehill/Agent-Junction/issues"
+  },
+  "homepage": "https://github.com/danielrosehill/Agent-Junction#readme",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "claude-junction": "dist/index.js"
+    "agent-junction": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",

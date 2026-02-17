@@ -1,4 +1,4 @@
-# Claude Junction — Architecture Diagrams
+# Agent Junction — Architecture Diagrams
 
 ## System Overview (Localhost Mode)
 
@@ -9,7 +9,7 @@ graph TB
         CC2[Claude Code 2<br/><i>quiet-harbor</i>]
         CC3[Claude Code 3<br/><i>swift-lantern</i>]
 
-        subgraph Junction Server [Claude Junction · 127.0.0.1:4200]
+        subgraph Junction Server [Agent Junction ·127.0.0.1:4200]
             MCP[MCP Endpoint<br/>/mcp]
             Health[Health Endpoint<br/>/health]
             J[Junction Singleton<br/><i>in-memory state</i>]
@@ -38,7 +38,7 @@ graph TB
         CC1[Claude Code 1<br/><i>crimson-falcon</i>]
         CC2[Claude Code 2<br/><i>quiet-harbor</i>]
 
-        subgraph Junction Server [Claude Junction · 0.0.0.0:4200]
+        subgraph Junction Server [Agent Junction ·0.0.0.0:4200]
             MCP[MCP Endpoint<br/>/mcp]
             Health[Health Endpoint<br/>/health]
             J[Junction Singleton]

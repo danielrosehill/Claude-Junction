@@ -11,7 +11,7 @@ export function registerTools(
 ): void {
   server.tool(
     "register",
-    "Join the Claude Junction. Returns your unique alias and how many other peers are connected.",
+    "Join the Agent Junction. Returns your unique alias and how many other peers are connected.",
     {},
     async () => {
       const result = junction.register(sessionId);

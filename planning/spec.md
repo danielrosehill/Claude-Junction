@@ -1,4 +1,4 @@
-# Claude Junction — Specification
+# Agent Junction — Specification
 
 ## Problem
 
@@ -6,7 +6,7 @@ Multiple Claude Code instances — on the same host or across a LAN — frequent
 
 ## Solution
 
-Claude Junction is a lightweight MCP server that provides an ephemeral, encrypted peer-to-peer message bus between Claude Code instances. It supports two modes:
+Agent Junction is a lightweight MCP server that provides an ephemeral, encrypted peer-to-peer message bus between Claude Code instances. It supports two modes:
 
 - **Localhost mode** (default) — binds to `127.0.0.1`, connects instances on the same machine
 - **LAN mode** — binds to `0.0.0.0`, allows instances on different machines to communicate

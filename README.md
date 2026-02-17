@@ -1,10 +1,10 @@
-# Claude Junction
+# Agent Junction
 
 An MCP server that lets Claude Code instances communicate directly via an ephemeral, encrypted peer-to-peer message bus. Works on localhost or across your LAN.
 
 ## The Problem
 
-Multiple Claude Code sessions often have information the other needs — config paths, secrets, environment variables. Currently the human must manually relay this. Claude Junction eliminates that bottleneck.
+Multiple Claude Code sessions often have information the other needs — config paths, secrets, environment variables. Currently the human must manually relay this. Agent Junction eliminates that bottleneck.
 
 ## How It Works
 
@@ -15,11 +15,32 @@ Multiple Claude Code sessions often have information the other needs — config 
 
 ## Quick Start
 
+### Option 1: npx (recommended)
+
+No install needed — just run:
+
 ```bash
+npx agent-junction
+```
+
+### Option 2: Global install
+
+```bash
+npm install -g agent-junction
+agent-junction
+```
+
+### Option 3: From source
+
+```bash
+git clone https://github.com/danielrosehill/Agent-Junction.git
+cd Agent-Junction
 npm install
 npm run build
 npm start
 ```
+
+### Connect Claude Code
 
 Add to each Claude Code instance's MCP config:
 

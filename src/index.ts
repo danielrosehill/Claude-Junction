@@ -49,7 +49,7 @@ const startTime = Date.now();
 
 function createServer(sessionId: string): McpServer {
   const server = new McpServer({
-    name: "claude-junction",
+    name: "agent-junction",
     version: "0.1.0",
   });
   registerTools(server, junction, sessionId, config);
@@ -191,7 +191,7 @@ async function start() {
   const isLan = config.host === "0.0.0.0";
   const server = app.listen(config.port, config.host, () => {
     console.log(
-      `Claude Junction running at http://${config.host}:${config.port}`
+      `Agent Junction running at http://${config.host}:${config.port}`
     );
     console.log(`Mode:   ${isLan ? "LAN (accessible from network)" : "localhost only"}`);
     console.log(`Health: http://${config.host}:${config.port}/health`);
